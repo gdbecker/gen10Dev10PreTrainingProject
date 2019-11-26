@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/JavaScript" src="todolist2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    
+    <!--Loading the jquery file before the BootStrap 4 js file finally made it possible to dismiss alerts-->
+    
+    <style>
+        .alert {
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 10px; margin-bottom: 10px">ToDo List</h1>
+    <form name="todolist" onsubmit="return submitTask();" class="form-inline" style="text-align: left">  
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-sm"></div>
+                <div class="col-sm-9">
+                    <label for="task">Task</label>
+                </div>
+                <div class="col-sm"></div>
+            </div>
+            <div class="row justify-content-start">
+                <div class="col-sm"></div>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="task" style="width: inherit">
+                </div>
+                <div class="col-sm"></div>
+            </div>
+                <div class="row justify-content-start">
+                    <div class="col-sm"></div>
+                    <div class="col-sm-9">
+                        <label for="date" style="margin-top: 15px">Deadline Date</label>
+                    </div>
+                    <div class="col-sm"></div>
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-sm"></div>
+                    <div class="col-sm-9">
+                        <input type="date" class="form-control" id="date" placeholder="mm/dd/yyyy" style="width: inherit">
+                    </div>
+                    <div class="col-sm"></div>
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-sm"></div>
+                    <div class="col-sm-9">
+                        <button type="submit" id="submitButton" class="btn btn-primary" style="margin-top: 15px; margin-bottom: 15px">Submit</button>
+                    </div>
+                    <div class="col-sm"></div>
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-xl-12">   
+                        <hr/>
+                    </div>
+                </div>
+        </div>
+    </form>
+    
+    <div class="row justify-content-start" id="alerts">
+    </div>
+</body>
+</html>
